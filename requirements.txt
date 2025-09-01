@@ -1,0 +1,6 @@
+python-dotenv
+requests
+pymupdf
+msal
+faiss-cpu
+sentence-transformers
