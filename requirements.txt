@@ -1,6 +1,7 @@
-python-dotenv
-requests
-pymupdf
-msal
 faiss-cpu
+numpy
 sentence-transformers
+PyMuPDF
+requests
+python-dotenv
+mcp

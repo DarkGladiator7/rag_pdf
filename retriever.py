@@ -24,3 +24,8 @@ def search_vector_db(query: str, k=5):
         if idx != -1:
             results.append(metas[idx])
     return results
+
+def list_all_sources():
+    """Return all indexed sources with metadata."""
+    with open(META_FILE, "r", encoding="utf-8") as f:
+        return [json.loads(line) for line in f]

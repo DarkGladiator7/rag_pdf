@@ -16,9 +16,6 @@ DATA_DIR = "data"
 os.makedirs(DATA_DIR, exist_ok=True)
 
 
-# -----------------------
-# 📎 Fetch PDF attachments
-# -----------------------
 def list_pdfs_in_space(space_key=SPACE_KEY, limit=50):
     """List all PDF attachments in the given Confluence space."""
     url = f"{CONFLUENCE_URL}/rest/api/content"
@@ -65,10 +62,6 @@ def download_all_pdfs():
             print(f"❌ Failed to download {pdf['title']}: {response.text}")
     return downloaded_files
 
-
-# -----------------------
-# 📄 Fetch page content
-# -----------------------
 def fetch_all_page_texts(space_key=SPACE_KEY, limit=50):
     """Fetch plain text content from all pages in the space."""
     url = f"{CONFLUENCE_URL}/rest/api/content"

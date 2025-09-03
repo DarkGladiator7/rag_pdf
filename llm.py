@@ -3,6 +3,7 @@ import requests
 import json
 from dotenv import load_dotenv
 
+# Load env vars
 load_dotenv()
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
@@ -16,9 +17,7 @@ HEADERS = {
     "Content-Type": "application/json"
 }
 
-
 def call_llm(messages, temperature=0.3, expect_json=False):
-    """Calls Groq's LLaMA model via chat endpoint."""
     payload = {
         "model": GROQ_MODEL,
         "messages": messages,
