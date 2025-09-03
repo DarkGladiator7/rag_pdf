@@ -4,4 +4,4 @@ sentence-transformers
 PyMuPDF
 requests
 python-dotenv
-mcp
+fastapi
